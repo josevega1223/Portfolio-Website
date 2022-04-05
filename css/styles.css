@@ -1,0 +1,255 @@
+/*
+Colors used
+
+Text Color (Black): #000000;
+Primary Color (Gray Greenish): #B5D7CB;
+ */
+
+ :root {
+--bg: #B5D7CB;
+--font-family: 'Libre Franklin', sans-serif;
+--font-family-header: 'Roboto', sans-serif;
+--link-color: #000000;
+--link-color-visited: #444849;
+--link-color-active: #0000ff;
+--color-button:#357b70;
+--button-color-font:#ffffff;
+--grid-color: #d3d3d3;
+
+ }
+
+ *{
+  box-sizing: border-box;
+}
+
+ body{
+    background-color:var(--bg);
+    font-family:var(--font-family);
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1{
+    font-family: var(--font-family-header);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+h2 {
+    font-family: var(--font-family-header);
+    font-size: 24px;
+    font-weight: 700;
+    line-height:1.8;
+  }
+
+  a{
+      color: var(--link-color);
+  }
+
+  a:visited {
+      color: var(--link-color-visited);
+  }
+
+  a:hover, a:focus {
+      text-decoration: none;
+  }
+
+  a:active {
+      color: var(--link-color-active) ;
+  }
+
+  button, 
+  .button {
+    border: none;
+    display: inline-block;
+    font-family: var(--font-family);
+    background-color: var(--color-button);
+    color: var(--button-color-font);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #0000004d;
+    transition: 0.4s opacity, 0.4s font-size;
+  }
+
+  button:hover, 
+  button:focus,
+  .button:hover, 
+  .button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+    font-size:18px;
+  }
+
+#aboutbutton {
+  display: block;
+  text-align: center;
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+  .navigation-list__item--active {
+    text-decoration: none;
+  }
+
+  .profile_portrait{
+    float:left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+
+  .page-footer{
+    clear:both;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  .page-header{
+    display:flex;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .page-header_item{
+    flex:0 1 200px;
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .page-header_item:last-child{
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .navigation-list{
+    list-style-type: none;
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+    transition: 0.4s opacity, 0.4s font-size;
+  }
+
+  .navigation-list li:hover{
+    cursor:pointer;
+    opacity: 0.8;
+    font-size: 18px;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-gap: 20px;
+  }
+
+  .grid_item{
+    background-color: var(--grid-color);
+  }
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+
+  .aboutheader{
+    text-align: center;
+  }
+
+  .abouttable{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes color-change {
+    0% {
+      fill: #ff7f2a;
+    }
+    50% {
+      fill: #FFFA00;
+    }
+    100% {
+      fill: #A30F00;
+    }
+  }
+
+  .sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+
+  .cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+
+  .cloud-back {
+    animation-duration: 34s;
+    animation-name:cloud-move-reverse;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+ 
+
+ 
+  
+
+ 
