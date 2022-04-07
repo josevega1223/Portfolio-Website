@@ -193,6 +193,8 @@ h2 {
 
   .aboutheader{
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .abouttable{
